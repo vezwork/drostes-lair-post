@@ -16,6 +16,8 @@ body {
     28 / 28px / 0 round;
   border-width: 28px;
   border-style: solid;
+  /* to keep content width constant with addition of border */
+  box-sizing: content-box;
 }
 
 p:first-of-type:first-letter {
