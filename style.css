@@ -22,6 +22,7 @@ body {
 
 p:first-of-type:first-letter {
   font-family: gothic-pixel-font;
+  float: left;
   font-size: 6.2rem;
   margin-bottom: -1rem;
   color: #be7a2d;
