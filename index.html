@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -282,12 +282,12 @@
       <p>
         Subsequently's lack of "spooky action at a distance" and its
         imperative model felt appealing to us. They added up to a
-        physical feeling that seemed appropriate for an live,
+        physical feeling that seemed appropriate for a live,
         interactive, visual programming system. Also, they were weird
         by conventional CS standards, which is always a good sign.
       </p>
       <p>
-        To extend the Subseqently model to work for
+        In order to extend the Subseqently model to work for
         Construct-'n'-Count-style counting problems, we had to add
         branching. Subsequently has conditional branches, as shown in
         the shot above, but we needed <i>unconditional</i> branches –
@@ -307,7 +307,7 @@
         >
         or "nondeterminism". Admittedly, it's less common to see this
         kind of thing in an imperative environment like Droste's Lair,
-        which is exciting
+        which is exciting.
       </p>
       <p>
         TODO: illustration/visual?: BRANCHING COMPUTATION +
@@ -368,10 +368,10 @@
         lie outside this range, like the Sierpinski problem alluded to
         earlier. We knew there was good reason to resist whole-hog
         recursion, which is notoriously difficult to learn and work
-        with for people who aren't committed programmers. So we spent
-        some time sketching to see if we could find an alternative to
-        recursion that gave us the expressivity we wanted while
-        fitting better into Subsequently's model.
+        with, especially for those who aren't committed programmers.
+        So we spent some time sketching to see if we could find an
+        alternative to recursion that gave us the expressivity we
+        wanted while fitting better into Subsequently's model.
       </p>
       <p>
         In the end, we couldn't make anything work, and we went for
@@ -478,7 +478,7 @@
       <figure>
         <img src="img-exegesis/dominoes-by-hand.jpg" />
         <figcaption>
-          A concrete tree of domino converings built by hand
+          A concrete tree of domino coverings built by hand
         </figcaption>
       </figure>
       <p>TODO idk</p>
@@ -491,10 +491,10 @@
         ensuing errors as a post-hoc reaction to the situation.
       </p>
       <p>
-        Leaving behind traditional, if-then-style conditionals opened
+        Leaving behind traditional, if-then style conditionals opened
         up a large space of designs. We went through several
         iterations of error handling, during both the initial design
-        process and early implementation. Our first design that worked
+        process and early implementation. The first design that worked
         for all our examples was allowing the user to attach an error
         handler frame to any other frame as a "catch" for that frame's
         action. In the end we landed on a more general mechanism:
