@@ -22,7 +22,6 @@ body {
 
 p:first-of-type:first-letter {
   font-family: gothic-pixel-font;
-  float: left;
   font-size: 6.2rem;
   margin-bottom: -1rem;
   color: #be7a2d;
@@ -44,7 +43,6 @@ p:first-of-type:first-line {
 p:first-letter {
   font-family: gothic-pixel-font;
   line-height: 1;
-  float: left;
   font-size: 3.2rem;
   margin-bottom: -1rem;
 }

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -395,6 +395,52 @@
         moment) that Droste's Lair is also a point-and-click adventure
         game.
       </p>
+      <h3>Branching & Ambs</h3>
+      <figure
+        style="float: right; max-width: 160px; margin: 0 0 20px 20px"
+      >
+        <img src="img-exegesis/stack.png" />
+        <figcaption>
+          1. "move any item" has multiple outputs
+        </figcaption>
+      </figure>
+      <figure
+        style="
+          float: right;
+          max-width: 160px;
+          margin: 0 0 0 20px;
+          clear: right;
+        "
+      >
+        <img src="img-exegesis/branch.png" />
+        <figcaption>
+          2. invoking multiple actions on a panel
+        </figcaption>
+      </figure>
+      <p>
+        There are two ways to produce branching computation on a
+        panel:
+      </p>
+      <ol>
+        <li>
+          Invoking an action or procedure that has multiple outputs,
+          or
+        </li>
+        <li>Invoking multiple actions or procedures.</li>
+      </ol>
+
+      <p>
+        When an action or procedure has multiple outputs, we group
+        those outputs into a stack of panels in the interface. It
+        would have alternatively been possible to not group those
+        outputs, and also display them as branching paths.
+      </p>
+      <p>
+        The stack visualization keeps the interface closer to the
+        structure of the underlying program, compared to branching,
+        which would be closer to the run-time trace of the program.
+      </p>
+
       <h3>Recursion</h3>
       <p>
         Subsequently doesn't have recursion. To loop in Subsequently,
@@ -455,6 +501,7 @@
         <b>hole</b> containing the body of the called procedure
         followed by an "after the 'procedure call' action" panel.
       </p>
+
       <figure>
         <img src="img-exegesis/hole.jpg" />
         <figcaption>The world's simplest procedure call</figcaption>
@@ -464,6 +511,11 @@
         floor of the editor was inspired by metaphors of "depth" in
         recursion, and by the spooky, disorienting feeling of crawling
         deeper and deeper into caves and/or recursive functions.
+      </p>
+      <p>
+        >[aside: During a playtest, the player referred to a procedure
+        call sigil as a "label", seemingly referencing labels for
+        <code>goto</code>s/jumps]
       </p>
       <p>
         In Droste's Lair, you can call a procedure on an entire panel
@@ -504,6 +556,7 @@
         >
         for trouble.)
       </p>
+
       <p>
         Although we've tried in this project to visualize recursion as
         concretely and understandably as possible, building a
@@ -521,7 +574,17 @@
           A concrete tree of domino coverings built by hand
         </figcaption>
       </figure>
-      <p>TODO idk</p>
+      <figure>
+        <img
+          src="img-exegesis/dominoes-by-procedure.jpg"
+          style="max-height: 400px; margin: 0 auto"
+        />
+        <figcaption>
+          For visual comparison, a (zoomed out) procedurely
+          constructed tree of domino coverings
+        </figcaption>
+      </figure>
+
       <h3>Conditionals</h3>
       <p>
         Our design naturally diverged from Subsequently's when it came
@@ -664,36 +727,16 @@
         </li>
       </ul>
 
-      <h3>FIND A HOME FOR THESE SWEET BABIES</h3>
-      <p>(maybe. we don't have to.)</p>
-      <p>
-        TODO: (Strictly speaking, the domino-counting problem is
-        acheivable with a flowchart loop since the recursion is in
-        tail position (assuming we have amb), the path-counting
-        problem requires a more general sort of recursion, not
-        achievable with a flowchart loop. This is one of the main
-        reasons we added recursion to Droste's Lair, rather than
-        sticking with flowchart-loop "gotos" like in Subsequently.
-      </p>
-      <p>
-        Although we gained a certain feeling for simple counting
-        problems, we also gave something up. Droste's Lair allows you
-        to produce stacks of objects, but you cannot easily see what
-        actions led to individual objects in the stack like you can
-        with a branching decision tree in construct n' count. [TODO:
-        this isn't actually a limit of recursion, more our particular
-        visualization?]
-      </p>
-      <p>
-        >[aside: its interesting to think about alternatives to
-        procedure calls. During a playtest, the player referred to a
-        procedure call sigil as a "label", seemingly invoking
-        something like a `goto`. As they continued to explore the
-        system, they refined their understanding of how the procedure
-        calls work. > >It's worth noting that procedure definitions
-        know neither their calling panel nor their return panel,
-        making them fairly abstract. Loops are less abstract.]
-      </p>
+      <div
+        style="
+          background-image: url(./illuman.png);
+          background-size: 120px;
+          width: calc(100% + 75px);
+          height: 40px;
+          margin: 40px -37.5px;
+        "
+      ></div>
+
       <p>
         <a href="https://github.com/joshuahhh/drostes-lair">
           Droste's Lair<br />on Github</a
