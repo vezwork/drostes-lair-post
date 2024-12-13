@@ -34,6 +34,11 @@ p:first-of-type:first-letter {
   padding: 0.8rem 0 0 6px;
   margin-left: -8px;
 }
+p:first-of-type:first-line {
+  font-family: gothic-pixel-font;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
 p:first-letter {
   font-family: gothic-pixel-font;
   line-height: 1;
