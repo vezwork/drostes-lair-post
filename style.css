@@ -1,0 +1,123 @@
+body {
+  background-color: #111;
+  color: #aaa;
+  padding: 3rem 1.25rem;
+  max-width: 42rem;
+  margin: 0 auto;
+
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  hyphens: auto;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+@font-face {
+  font-family: gothic-pixel-font;
+  src: url("gothic-pixel-font.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Alkhemikal;
+  src: url("Alkhemikal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: gothic-pixel-font;
+  font-size: 120px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  top: 0.5rem;
+  color: #eee;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+.subtitle {
+  font-family: Alkhemikal;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.subsubtitle {
+  font-family: Alkhemikal;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: Alkhemikal;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  color: #eee;
+  line-height: 1;
+}
+
+h3 {
+  font-family: Alkhemikal;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 35px;
+  color: #eee;
+}
+
+.ml-1px {
+  margin-left: 0.2rem;
+}
+
+.rubricated {
+  color: #aa0000;
+}
+
+p,
+ul,
+figure {
+  margin: 1.5rem 0;
+}
+
+.subsubtitle a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  color: #66c2ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover,
+a:focus {
+  color: #99d6ff;
+  text-decoration: underline;
+}
+
+.box {
+  /* TODO: inline-block turns off margin collapse LOL */
+  display: inline-block;
+  background-image: url("parchment.jpg");
+  background-color: rgba(0, 0, 128, 0.7);
+  background-blend-mode: darken;
+  padding: 1rem;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+}

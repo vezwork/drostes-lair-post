@@ -1,1 +1,548 @@
-hi
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Droste's Lair</title>
+    <link
+      rel="preload"
+      href="./gothic-pixel-font.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./Alkhemikal.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="subtitle">An invitation into ...</div>
+      <h1>
+        <span class="rubricated">D</span>ro<span class="ml-1px"
+          >s</span
+        >te's <span class="rubricated">L</span>ai<span class="ml-1px"
+          >r</span
+        >
+      </h1>
+      <div class="subsubtitle" style="text-align: right">
+        by
+        <a href="https://elliot.website/">Elliot Evans</a>
+        &
+        <a href="https://joshuahhh.com/">Josh Horowitz</a>
+      </div>
+      <p>
+        Droste's Lair is an unusual programming environment for
+        building and counting mathematical structures, built in a
+        two-week sprint. In Droste's Lair, the user manipulates
+        mathematical structures through direct interactions: dropping
+        dominoes on chessboards or pulling items in and out of lists.
+        The system's power comes from two forms of abstraction on top
+        of this foundation: an "amb" mechanism that allows strands of
+        execution to branch from one another, and a procedure-calling
+        mechanism that enables recursion.
+      </p>
+      <p>
+        Also, Droste's Lair is a swords-and-sorcery-style
+        point-and-click adventure game. (Sort of.)
+      </p>
+      <h2>Walkthrough</h2>
+      <p>
+        To get you up to speed with the gameplay of Droste's Lair,
+        we'll take you on three quick jaunts into the caverns. We
+        invite you to join us on this walkthrough – links to the game
+        are available at the top and bottom of each journey so you can
+        play along from the beginning or jump to the conclusion.
+      </p>
+      <p>
+        [TODO: put into box] (Pan by scrolling, or move the cursor
+        with shift held. Undo is available with ctrl-z. Controls
+        beyond these are kept deeply secret.)
+      </p>
+      <h3>The Reversal of Fortune</h3>
+      <p class="box">
+        <a
+          href="https://joshuahhh.com/drostes-lair/#?example=reverseBlank"
+        >
+          ➳ Link to start [TODO: style]
+        </a>
+      </p>
+      <p>
+        A piece of parchment is against the dungeon wall, dimly lit by
+        flickering candelight. On it is a list:
+        <code>[a, b, c, d]</code>.
+      </p>
+      <p>
+        <img src="img-walkthrough/1-1.jpg" />
+      </p>
+      <p>
+        Your teacher (who's also a cool wizard) has tasked you with
+        reversing the elements of this list. You first try to do this
+        by moving elements one by one. Clicking an element...
+      </p>
+      <p>
+        <img src="img-walkthrough/1-2.jpg" />
+      </p>
+      <p>
+        ...picks it up, and reveals places it could go. You add it to
+        the start of the second, currently empty list.
+      </p>
+      <p>
+        <img src="img-walkthrough/1-3.jpg" />
+      </p>
+      <p>
+        Your action has magically created a second square of parchment
+        on the wall showing its effect. You could almost think of this
+        as a "comic book", though the damp air and clink of chains in
+        the distance make the situation anything but comical.
+      </p>
+      <p>
+        You could continue moving items one by one, and it wouldn't
+        take long with a list this short. But you know that this is
+        just training – sooner than you would like, you will face far
+        greater foes. Moving items by hand, you'd only make it through
+        a handful of items before being knocked out by some orcish
+        cudgel. You need a way to automate these motions, a sorceror's
+        apprentise of sorts.
+      </p>
+      <p>
+        The spell to cast has been with you the whole time, in the
+        top-left: ♌︎. This sigil marks the script you are writing.
+        With it, you can take what you've done so far, and cast it
+        again, as a spell of its own.
+      </p>
+      <p>
+        With some trepidation (you're playing with recursion, after
+        all!), you grab the sigil and cast it onto the latest
+        square...
+      </p>
+      <p>
+        <img src="img-walkthrough/1-4.jpg" />
+      </p>
+      <p>
+        Your trepidation was called for. The effect of your spell is
+        simply astonishing.
+      </p>
+      <p>
+        <img src="img-walkthrough/1-5.jpg" />
+      </p>
+      <p>
+        Portals into the wall have opened up, deep holes with deeper
+        holes beyond. Inside each hole the sigil ♌︎ does its work. So
+        each begins with the "start" parchment, and then has a "move
+        item 1" parchment, just like the script outside the hole. But
+        each starts with the outcome of the previous hole. So while
+        the top level moves an "a", the next level moves a "b", and so
+        on.
+      </p>
+      <p>Where will this madness end?</p>
+      <p>
+        At the bottom, in a fateful encounter with the eldrich
+        consequences of your sigilic incantation: the base case.
+      </p>
+      <p>
+        <img src="img-walkthrough/1-6.jpg" />
+      </p>
+      <p>
+        You were never far from it. A short pan takes you over to the
+        deepest hole, four levels below the surface.
+      </p>
+      <p>
+        In this deepest level, the first list has been exhasted. All
+        items have been moved to the second list, in reverse order.
+        This is great progress, but we're not done yet. Though our
+        answer lurks in the depths of the the recursive holes, nothing
+        is coming out to the surface. Yet.
+      </p>
+      <p>
+        The problem is that our parchment is getting stuck. The
+        spirits of the parchment call out to us, through the dark mark
+        of the beast [TODO: nah]. They're telling us: "[TODO modern
+        error] you told us to move item 1 from the first list, but the
+        first list is empty!". We know that, actually, the first list
+        being empty isn't a problem at all – it just means that we are
+        ready to call our answer back from the world of spirits. So we
+        guide the parchment along by giving it an escape route.
+        Clicking the mark of the beast creates one.
+      </p>
+      <p>
+        <img src="img-walkthrough/1-7.jpg" />
+      </p>
+      <p>
+        The escape route guides the parchment from the deepest level,
+        where it ran into the obstacle of the empty list. At each
+        higher level, the escape route is available, but the parchment
+        doesn't take it, since it can happily proceed through the item
+        movement and the recursive call. At last, we have a final
+        answer on the far right. Our strange recipe is complete. We
+        are ready to face far larger lists, and the monstrous beings
+        that might bring them to us with nefarious intent.
+      </p>
+      <p class="box">
+        <a
+          href="https://joshuahhh.com/drostes-lair/#?example=reverseDone"
+        >
+          ➳ Link to end [TODO style]
+        </a>
+      </p>
+      <h3>The Everbranching</h3>
+      <p>[TODO]</p>
+      <h3>The Enumeration</h3>
+      <p>[TODO]</p>
+      <h2>
+        Exegesis
+        <span class="subsubtitle"
+          >(a.k.a. Discussion & Future Work)</span
+        >
+      </h2>
+      <p>
+        Now that you've returned from your travails in the caverns,
+        we'd like to tell you a bit about how Droste's Lair came to be
+        and what we think of it. Grab a mug of spiced mead and take a
+        seat.
+      </p>
+      <p>
+        In short: We feel great about where Droste's Lair ended up.
+        It's a genuinely weird little creation that combines some of
+        our long-held principles with some wacky experiments. It was
+        really fun to make and it may even be fun to play with. We're
+        not sure what it's <i>good for</i>, exactly, but we're ok with
+        that for now.
+      </p>
+      <p>
+        For the rest of this section, we'll talk about some tensions
+        we thought through, some design decisions we made, and some
+        open questions that remain.
+      </p>
+      <h3>Programming model & origins thereof</h3>
+      <p>
+        This project fits into a lineage of projects that co-design an
+        underlying programming model with a visual interface for
+        viewing and interacting with that model. Of course we draw on
+        ideas from traditional programming languages, but always while
+        asking "what does this look like?" and "how does it feel to
+        edit this?".
+      </p>
+      <p>
+        We were influenced by a some prior projects in this vein. Josh
+        was interested in revisiting an old idea: a live-programming
+        interface for building trees to solve combinatorial counting
+        problems. His original prototype, called "Construct 'n'
+        Count", adopted a traditional functional-programming structure
+        where each level of a branching tree acted like a "map"
+        operation, defining a new variable that could be referred to
+        deeper in the tree.
+      </p>
+      <figure>
+        <img src="img-exegesis/construct-n-count.png" />
+        <figcaption>
+          Juiceless "Construct 'n' Count" prototype, 2015
+        </figcaption>
+      </figure>
+      <p>
+        Marcel Goethals' much more recent Subsequently prototype
+        offered an exciting alternative to this functional
+        nested-scope vibe. In Subsequently, each comic pane contains
+        the full state of the world at a point in time. You act
+        directly on these contents. There are no variables buried in
+        some other pane; everything you need is right where you are.
+        Subsequently also demonstrated that some processes (like
+        picking elements out of arrays) became simpler and more
+        intuitive if presented as
+        <i>imperative processes</i> which mutate a world state, rather
+        than as <i>functional processes</i>.
+      </p>
+      <figure>
+        <img src="img-exegesis/subsequently.png" />
+        <figcaption>
+          <a
+            href="https://www.youtube.com/watch?v=4GOeYylCMJI&t=9116s"
+            >Subsequently</a
+          >
+          by Marcel Goethals, 2024
+        </figcaption>
+      </figure>
+      <p>
+        Subsequently's lack of "spooky action at a distance" and its
+        imperative model felt appealing to us. They added up to a
+        physical feeling that seemed appropriate for an live,
+        interactive, visual programming system. Also, they were weird
+        by conventional CS standards, which is always a good sign.
+      </p>
+      <p>
+        To extend the Subseqently model to work for
+        Construct-'n'-Count-style counting problems, we had to add
+        branching. Subsequently has conditional branches, as shown in
+        the shot above, but we needed <i>unconditional</i> branches –
+        branches that are all taken simultaneously, splitting
+        execution into parallel universes. This sounds fancy, but it's
+        straightforward to build. It is also well-trodden ground in
+        computer science, also known as
+        <a
+          href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-28.html"
+        >
+          "amb"
+        </a>
+        or
+        <a
+          href="https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad"
+          >"the list monad"</a
+        >
+        or "nondeterminism". Admittedly, it's less common to see this
+        kind of thing in an imperative environment like Droste's Lair,
+        which is exciting
+      </p>
+      <p>
+        TODO: illustration/visual?: BRANCHING COMPUTATION +
+        SUBSEQUENTLY potion brew
+      </p>
+      <p>
+        The Subsequently-plus-branching potion we brewed up was enough
+        to cover some simple counting problems. But some of the most
+        interesting counting problems were still out of our grasp.
+        These were the ones involving recursion: where counting
+        possibilities for a larger structure involves splitting it
+        into pieces, counting possibilities for each piece, and then
+        recombining the possibilities of the pieces into possibilities
+        for the whole. In the walkthrough, we showed how to use
+        recursion to count ways to cover a checkerboard with dominoes.
+        We were actually originally motivated by a more complicated
+        question: counting paths on the fractal Sierpinski graph (also
+        known as the Hanoi graph, since it maps out states in the
+        Towers of Hanoi puzzle).
+      </p>
+      <figure>
+        <img src="img-exegesis/sierpinski.png" />
+        <figcaption>
+          Some flavor of our Sierpinski investigations
+        </figcaption>
+      </figure>
+      <p>
+        Aside from the applicability of recursion to counting
+        problems, we were also just plain curious about how to make
+        recursive structures comprehensible in a visual programming
+        interface. (Elliot in particular has been investigating this
+        strand for some time.)
+      </p>
+      <p>
+        With that, we had (& you now have) the basic formula for
+        Drostes' Lair's programming model:
+      </p>
+      <ul>
+        <li>Subsequently-style imperative flowcharts</li>
+        <li>... plus branching paths</li>
+        <li>... plus recursion.</li>
+      </ul>
+      <p>
+        That's basically it, as long as you ignore (as we do for the
+        moment) that Droste's Lair is also a point-and-click adventure
+        game.
+      </p>
+      <h3>Recursion</h3>
+      <p>
+        Subsequently doesn't have recursion. To loop in Subsequently,
+        you make an arrow from a step back to a previous step,
+        essentially a "goto". Although this may condemn Marcel to a
+        life of Dijkstra-haunting, it is honestly a pretty great way
+        to loop, for a certain range of situations.
+      </p>
+      <p>
+        Some of the problems we wanted our system to handle seemed to
+        lie outside this range, like the Sierpinski problem alluded to
+        earlier. We knew there was good reason to resist whole-hog
+        recursion, which is notoriously difficult to learn and work
+        with for people who aren't committed programmers. So we spent
+        some time sketching to see if we could find an alternative to
+        recursion that gave us the expressivity we wanted while
+        fitting better into Subsequently's model.
+      </p>
+      <p>
+        In the end, we couldn't make anything work, and we went for
+        fairly traditional recursion. We still feel there could be
+        something interesting down this road. For instance, we spent
+        some time thinking about what it would mean for a flowchart
+        arrow to flow not out of an entire frame of a flowchart, but
+        out of a piece of a frame. In our imagination, this could let
+        a flowchart express the "divide-and-conquer" structure of a
+        recursion. (One way to look at this: Flowchart arrows roughly
+        correspond to tail-recursive calls. What we have here suggests
+        a gentle loosening of this constraint to allow making multiple
+        simultaneous tail-recursive calls that commute with each other
+        because they operate on different parts of a structure.)
+      </p>
+      <figure>
+        <img src="img-exegesis/blue-arrows.png" />
+        <figcaption>
+          Whiteboard sketch of multiple arrows from individual
+          flowchart frames
+        </figcaption>
+      </figure>
+      <p>
+        Putting wild alternatives aside, it was now our job to bring
+        recursive calls (procedure calls in general) into the
+        Subsequently model. In Subsequently, an action is represented
+        as a comic panel that shows a picture of the world after the
+        action, annotated with graphics that illustrate the action
+        itself and descriptive text above the panel.
+      </p>
+      <figure>
+        <img src="img-exegesis/subsequently-action.png" />
+        <figcaption>
+          Subsequently's comic-panel representation of an action,
+          photographed with a potato
+        </figcaption>
+      </figure>
+      <p>
+        We took this design and extended it to our depiction of
+        procedure calls. Calls in our system are represented as a
+        <b>hole</b> containing the body of the called procedure
+        followed by an "after the 'procedure call' action" panel.
+      </p>
+      <figure>
+        <img src="img-exegesis/hole.jpg" />
+        <figcaption>The world's simplest procedure call</figcaption>
+      </figure>
+      <p>
+        Visually representing a call as a physical hole in the cobbled
+        floor of the editor was inspired by metaphors of "depth" in
+        recursion, and by the spooky, disorienting feeling of crawling
+        deeper and deeper into caves and/or recursive functions.
+      </p>
+      <p>
+        In Droste's Lair, you can call a procedure on an entire frame
+        or on a piece of a frame's contents that you select.
+      </p>
+      <figure>
+        <img src="img-exegesis/hole-sub.jpg" />
+        <figcaption>
+          The same procedure call as above, but restricted to a
+          sub-grid, producing a different effect
+        </figcaption>
+      </figure>
+      <p>
+        A note on how we visualized frame contents inside of holes:
+        The most straightforward move would have been to show a called
+        procedure operating only on the piece it was given, without
+        any reference on the parchments to the larger whole they came
+        from. But we reckoned that doing this would give up a lot of
+        the physical, "object-permanent" feeling that we were striving
+        for in our design. Passing into and out of procedure calls
+        would require reorientation. To maintain the feeling of
+        grounding we wanted, we instead chose to always show parts in
+        the context of the whole, with a color-coded outline to show
+        what part is actively focused by the procedure call and with
+        the rest of the whole faded out.
+      </p>
+      <p>
+        (We maintain a conceptual color scheme throughout Droste's
+        Lair's interface:
+        <span style="color: #fce8a7; font-weight: bold">yellow</span>
+        for actions,
+        <span style="color: hsl(249deg 37% 55%); font-weight: bold"
+          >purple</span
+        >
+        for procedures & calls, and
+        <span style="color: rgba(255, 128, 128); font-weight: bold"
+          >red</span
+        >
+        for trouble.)
+      </p>
+      <p>
+        Although we've tried in this project to visualize recursion as
+        concretely and understandably as possible, building a
+        recursive procedure is still an immensely "programmer-brained"
+        activity. It won't feel natural to most people, even with our
+        visualizations. But we aren't ready to give up on recursion
+        yet! What could we do to make building recursion in our system
+        less programmer-brained? Maybe users could start by building
+        concrete trees by hand, and then our system could help them
+        build recursive functions to match these?
+      </p>
+      <figure>
+        <img src="img-exegesis/dominoes-by-hand.jpg" />
+        <figcaption>
+          A concrete tree of domino converings built by hand
+        </figcaption>
+      </figure>
+      <p>TODO idk</p>
+      <h3>Conditionals</h3>
+      <p>
+        Our design naturally diverged from Subsequently's when it came
+        to flow control. We were looking for ways to make recursion
+        less "programmer-brained"; we gravitated towards letting the
+        user do whatever they wanted, and then letting them handle the
+        ensuing errors as a post-hoc reaction to the situation.
+      </p>
+      <p>
+        Leaving behind traditional, if-then-style conditionals opened
+        up a large space of designs. We went through several
+        iterations of error handling, during both the initial design
+        process and early implementation. Our first design that worked
+        for all our examples was allowing the user to attach an error
+        handler frame to any other frame as a "catch" for that frame's
+        action. In the end we landed on a more general mechanism:
+        attaching an "escape" frame for when
+        <i>all</i> possible actions from a frame result in error.
+      </p>
+      <figure>
+        <img src="img-exegesis/escape.jpg" />
+        <figcaption>
+          All actions from the start frame fail, and the escape route
+          is triggered
+        </figcaption>
+      </figure>
+      <p>
+        We don't have much confidence that this is the "right" way to
+        handle errors or other conditions in a system like this. More
+        exploration is needed!
+      </p>
+      <h3>FIND A HOME FOR THESE SWEET BABIES</h3>
+      <p>(maybe. we don't have to.)</p>
+      <p>
+        TODO: (Strictly speaking, the domino-counting problem is
+        acheivable with a flowchart loop since the recursion is in
+        tail position (assuming we have amb), the path-counting
+        problem requires a more general sort of recursion, not
+        achievable with a flowchart loop. This is one of the main
+        reasons we added recursion to Droste's Lair, rather than
+        sticking with flowchart-loop "gotos" like in Subsequently.
+      </p>
+      <p>
+        Although we gained a certain feeling for simple counting
+        problems, we also gave something up. Droste's Lair allows you
+        to produce stacks of objects, but you cannot easily see what
+        actions led to individual objects in the stack like you can
+        with a branching decision tree in construct n' count. [TODO:
+        this isn't actually a limit of recursion, more our particular
+        visualization?]
+      </p>
+      <p>
+        >[aside: its interesting to think about alternatives to
+        procedure calls. During a playtest, the player referred to a
+        procedure call sigil as a "label", seemingly invoking
+        something like a `goto`. As they continued to explore the
+        system, they refined their understanding of how the procedure
+        calls work. > >It's worth noting that procedure definitions
+        know neither their calling panel nor their return panel,
+        making them fairly abstract. Loops are less abstract.]
+      </p>
+    </main>
+  </body>
+</html>
