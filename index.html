@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -268,7 +268,7 @@
       <p>
         We took the tight time-boxing of our project as an excuse to
         be indulgent and follow our whims. Droste's Lair is definitely
-        an artistic investigation. It might also be a a research
+        an artistic investigation. It might also be a research
         project. We feel great about where it ended up. It's a
         genuinely weird little creation that combines some of our
         long-held principles with some out-on-a-limb experiments. It
@@ -277,10 +277,9 @@
         <i>good for</i>, exactly, but we're fine with that.
       </p>
       <p>
-        For the remainder of this "exegesis", we'll talk about the
-        ideas that braided together to form Droste's Lair, some
-        tensions we thought through, and some open questions that
-        remain.
+        For the rest of this "exegesis", we'll talk about the ideas
+        that braided together to form Droste's Lair, some tensions we
+        thought through, and some open questions that remain.
       </p>
       <h3>Programming model & origins thereof</h3>
       <p>
@@ -292,19 +291,19 @@
         feel to edit this?".
       </p>
       <p>
-        We were influenced by a some prior projects in this vein. Josh
+        We were influenced by a few prior projects in this vein. Josh
         was interested in revisiting an old idea: a live-programming
         interface for building trees to solve combinatorial counting
         problems. His original prototype, called "Construct 'n'
-        Count", adopted a traditional functional-programming structure
-        where each level of a branching tree acted like a "map"
-        operation, defining a new variable that could be referred to
-        deeper in the tree.
+        Count", adopted a functional-programming structure where each
+        level of a branching tree acted like a "map" operation,
+        defining a new variable that could be referred to deeper in
+        the tree.
       </p>
       <figure>
         <img src="img-exegesis/construct-n-count.png" />
         <figcaption>
-          Juiceless "Construct 'n' Count" prototype, 2015
+          Terminally juiceless "Construct 'n' Count" prototype, 2015
         </figcaption>
       </figure>
       <p>
@@ -312,9 +311,9 @@
         offered an exciting alternative to this functional
         nested-scope vibe. In Subsequently, each comic pane contains
         the full state of the world at a point in time. You act
-        directly on these contents. There are no variables buried in
-        some other pane; everything you need is right where you are.
-        Subsequently also demonstrated that some processes (like
+        directly on a pane's contents. There are no variables buried
+        in some other pane; everything you need is right where you
+        are. Subsequently also demonstrated that some processes (like
         picking elements out of arrays) became simpler and more
         intuitive if presented as
         <i>imperative processes</i> which mutate a world state, rather
