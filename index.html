@@ -34,20 +34,24 @@
   </head>
   <body>
     <main>
-      <div class="subtitle">An invitation into ...</div>
-      <h1>
-        <span class="rubricated">D</span>ro<span class="ml-1px"
-          >s</span
-        >te's <span class="rubricated">L</span>ai<span class="ml-1px"
-          >r</span
-        >
-      </h1>
-      <div class="subsubtitle" style="text-align: right">
-        by
-        <a href="https://elliot.website/">Elliot Evans</a>
-        &
-        <a href="https://joshuahhh.com/">Josh Horowitz</a>
+      <div style="margin-bottom: 2rem">
+        <div class="subtitle">An invitation into ...</div>
+        <h1>
+          <span class="rubricated">D</span>ro<span class="ml-1px"
+            >s</span
+          >te's <span class="rubricated">L</span>ai<span
+            class="ml-1px"
+            >r</span
+          >
+        </h1>
+        <div class="subsubtitle" style="text-align: right">
+          by
+          <a href="https://elliot.website/">Elliot Evans</a>
+          &
+          <a href="https://joshuahhh.com/">Josh Horowitz</a>
+        </div>
       </div>
+
       <p>
         Droste's Lair is an unusual programming environment for
         building and counting mathematical structures, built in a
@@ -63,7 +67,7 @@
         Also, Droste's Lair is a swords-and-sorcery-style
         point-and-click adventure game. (Sort of.)
       </p>
-      <h2>Walkthrough</h2>
+      <h2 class="rubricated">Walkthrough</h2>
       <p>
         To get you up to speed with the gameplay of Droste's Lair,
         we'll take you on three quick jaunts into the caverns. We
@@ -206,7 +210,7 @@
       <p>[TODO]</p>
       <h3>The Enumeration</h3>
       <p>[TODO]</p>
-      <h2>
+      <h2 class="rubricated">
         Exegesis
         <span class="subsubtitle"
           >(a.k.a. Discussion & Future Work)</span
@@ -513,6 +517,108 @@
         handle errors or other conditions in a system like this. More
         exploration is needed!
       </p>
+
+      <h3>Juice & Aesthetics</h3>
+      <p>
+        So far in the exegesis, we haven't acknowledged the dragon in
+        the room: Droste's Lair isn't just a visual programming
+        system. It's also a swords-and-sorcery-style point-and-click
+        adventure game. (Kind of... Not really... It is inspired by
+        the aesthetics and visual design of these sorts of games)
+      </p>
+      <p>
+        We wanted to dip our toes into
+        <a
+          style="
+            font-family: gothic-pixel-font;
+            font-size: 1.5rem;
+            color: white;
+            letter-spacing: 0.2rem;
+          "
+          href="https://www.youtube.com/watch?v=Fy0aCDmgnxg"
+          >Juice</a
+        >
+        as we constructed our dungeon.
+      </p>
+
+      <h3>Even More Future Directions</h3>
+      <p>
+        We've already highlighted some limitations & open questions in
+        the discussion above. But here are some more!
+      </p>
+      <ul>
+        <li>
+          <strong>Mixing microworlds</strong>: Why can't I drag a card
+          suit into the domino grid? Why can't I place a domino in a
+          list? These questions, although seemingly simple, fling open
+          the pandora's box of fundamental questions of composition
+          and foundations of representations in our system. It's hard
+          to know where to start!
+        </li>
+        <li>
+          <strong>Scaling</strong>: For this prototype, we've stuck to
+          small toy examples – neither the data nor the flow charts
+          get very large. When they do, the way we visualize things
+          begins to break down. This dovetails with a common critique
+          of visual programming – a failure to scale to larger
+          situations. But we're not worrying much yet. Future work
+          taking on scaling will have so many techniques to draw from!
+          Expanding and collapsing, minimaps, outline views, more
+          compact graphic design, and on and on. We've already dipped
+          our toes into this space with the recursion-depth filter we
+          mentioned in [TODO: third walkthrough example].
+        </li>
+        <li>
+          <strong>On Ramp</strong>: opens up questions of the
+          possibility of going from concrete to abstract. Also what
+          about having a narrative walk through in the game? A level
+          progression? [TODO: refine]
+        </li>
+        <li>
+          <strong>Representation of action</strong>: Following
+          Subsequently's example, we've added visual representation of
+          action itself to Droste's Lair. Rather than just seeing the
+          states of the world before and after an action, annotations
+          are added to the state to show what's happened. There are at
+          least four hypothetical views relevant to an action: a
+          "before" view, an "after" view, an annotated view of
+          "before" showing what is about to happen, and an annotated
+          view of "after" showing what just happened. In our current
+          system, we focus on the annotated view of "after". Is this
+          the best focus to have? Are there ways to include more
+          views, or to allow moving between views? Lots of interesting
+          questions here!
+        </li>
+        <li>
+          <strong>What do we do with it</strong>: We built Droste's
+          Lair as a short experiment. We are, honestly, pretty
+          delighted with it. But some may wonder: what good is this
+          thing anyway? We wonder that too, though we'd phrase it less
+          confrontationally. Could this project grow into an
+          educational tool? A mathematical laboratory? An
+          honest-to-goodness game? A programming environment for data
+          integration workflows? Hmmmm.
+        </li>
+      </ul>
+
+      <h2 class="rubricated">Thanks</h2>
+      <ul>
+        <li>Marcel Goethels, for the lovely inspiration</li>
+        <li>Ink &amp; Switch, for letting us present to them</li>
+        <li>
+          Pacific Programming Interfaces Confab, for letting us
+          present to them
+        </li>
+        <li>
+          Ivan Reese, for play-testing &amp; insightful feedback
+        </li>
+        <li>Andrew Blinn, for championing juice</li>
+        <li>
+          Rocky430 for inspiring conversation with Elliot about
+          Aesthetics such as Frutiger Aero and PSX
+        </li>
+      </ul>
+
       <h3>FIND A HOME FOR THESE SWEET BABIES</h3>
       <p>(maybe. we don't have to.)</p>
       <p>
@@ -542,6 +648,11 @@
         calls work. > >It's worth noting that procedure definitions
         know neither their calling panel nor their return panel,
         making them fairly abstract. Loops are less abstract.]
+      </p>
+      <p>
+        <a href="https://github.com/joshuahhh/drostes-lair">
+          Droste's Lair<br />on Github</a
+        >
       </p>
     </main>
   </body>
