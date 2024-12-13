@@ -378,8 +378,8 @@
         fairly traditional recursion. We still feel there could be
         something interesting down this road. For instance, we spent
         some time thinking about what it would mean for a flowchart
-        arrow to flow not out of an entire frame of a flowchart, but
-        out of a piece of a frame. In our imagination, this could let
+        arrow to flow not out of an entire panel of a flowchart, but
+        out of a piece of a panel. In our imagination, this could let
         a flowchart express the "divide-and-conquer" structure of a
         recursion. (One way to look at this: Flowchart arrows roughly
         correspond to tail-recursive calls. What we have here suggests
@@ -391,7 +391,7 @@
         <img src="img-exegesis/blue-arrows.png" />
         <figcaption>
           Whiteboard sketch of multiple arrows from individual
-          flowchart frames
+          flowchart panels
         </figcaption>
       </figure>
       <p>
@@ -426,8 +426,8 @@
         deeper and deeper into caves and/or recursive functions.
       </p>
       <p>
-        In Droste's Lair, you can call a procedure on an entire frame
-        or on a piece of a frame's contents that you select.
+        In Droste's Lair, you can call a procedure on an entire panel
+        or on a piece of a panel's contents that you select.
       </p>
       <figure>
         <img src="img-exegesis/hole-sub.jpg" />
@@ -437,7 +437,7 @@
         </figcaption>
       </figure>
       <p>
-        A note on how we visualized frame contents inside of holes:
+        A note on how we visualized panel contents inside of holes:
         The most straightforward move would have been to show a called
         procedure operating only on the piece it was given, without
         any reference on the parchments to the larger whole they came
@@ -496,15 +496,15 @@
         iterations of error handling, during both the initial design
         process and early implementation. The first design that worked
         for all our examples was allowing the user to attach an error
-        handler frame to any other frame as a "catch" for that frame's
+        handler panel to any other panel as a "catch" for that panel's
         action. In the end we landed on a more general mechanism:
-        attaching an "escape" frame for when
-        <i>all</i> possible actions from a frame result in error.
+        attaching an "escape" panel for when
+        <i>all</i> possible actions from a panel result in error.
       </p>
       <figure>
         <img src="img-exegesis/escape.jpg" />
         <figcaption>
-          All actions from the start frame fail, and the escape route
+          All actions from the start panel fail, and the escape route
           is triggered
         </figcaption>
       </figure>
