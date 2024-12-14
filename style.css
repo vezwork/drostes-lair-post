@@ -43,7 +43,7 @@ p:first-of-type:first-line {
 }
 p:first-letter {
   font-family: gothic-pixel-font;
-  line-height: 1;
+  line-height: 0.8;
   font-size: 3.2rem;
   margin-bottom: -1rem;
 }
