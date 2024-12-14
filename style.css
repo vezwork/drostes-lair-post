@@ -185,7 +185,7 @@ figcaption {
   font-style: italic;
 }
 
-.game-link img {
+.game-link video {
   mix-blend-mode: lighten;
   height: 4rem;
 }

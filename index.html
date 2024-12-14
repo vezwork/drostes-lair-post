@@ -94,7 +94,9 @@
         href="https://joshuahhh.com/drostes-lair/#?example=reverseBlank"
         class="game-link"
       >
-        <img src="candle.gif" />
+        <video autoplay muted loop>
+          <source src="candle.webm" type="video/webm" />
+        </video>
         Join from the start
       </a>
       <p>
@@ -230,7 +232,9 @@
         href="https://joshuahhh.com/drostes-lair/#?example=reverseDone"
         class="game-link"
       >
-        <img src="candle.gif" />
+        <video autoplay muted loop>
+          <source src="candle.webm" type="video/webm" />
+        </video>
         Witness the conclusion
       </a>
 
@@ -239,7 +243,9 @@
         href="https://joshuahhh.com/drostes-lair/#?example=cardsBlank"
         class="game-link"
       >
-        <img src="candle.gif" />
+        <video autoplay muted loop>
+          <source src="candle.webm" type="video/webm" />
+        </video>
         Join from the start
       </a>
       ...
@@ -247,7 +253,9 @@
         href="https://joshuahhh.com/drostes-lair/#?example=cardsDone"
         class="game-link"
       >
-        <img src="candle.gif" />
+        <video autoplay muted loop>
+          <source src="candle.webm" type="video/webm" />
+        </video>
         Witness the conclusion
       </a>
       <h3>The Enumeration</h3>
@@ -255,7 +263,9 @@
         href="https://joshuahhh.com/drostes-lair/#?example=dominoesBlank"
         class="game-link"
       >
-        <img src="candle.gif" />
+        <video autoplay muted loop>
+          <source src="candle.webm" type="video/webm" />
+        </video>
         Join from the start
       </a>
       ...
@@ -263,7 +273,9 @@
         href="https://joshuahhh.com/drostes-lair/#?example=dominoesDone"
         class="game-link"
       >
-        <img src="candle.gif" />
+        <video autoplay muted loop>
+          <source src="candle.webm" type="video/webm" />
+        </video>
         Witness the conclusion
       </a>
       <div
@@ -843,5 +855,13 @@
         MMXXIV
       </div>
     </main>
+    <script>
+      const videos = document.querySelectorAll("video");
+      videos.forEach((video) => {
+        video.addEventListener("loadeddata", () => {
+          video.currentTime = Math.random() * 5;
+        });
+      });
+    </script>
   </body>
 </html>
