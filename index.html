@@ -405,50 +405,63 @@
         moment) that Droste's Lair is also a point-and-click adventure
         game.
       </p>
-      <h3>Branching & Ambs</h3>
-      <figure
-        style="float: right; max-width: 160px; margin: 0 0 20px 20px"
-      >
-        <img src="img-exegesis/stack.png" />
-        <figcaption>
-          1. "move any item" has multiple outputs
-        </figcaption>
-      </figure>
-      <figure
-        style="
-          float: right;
-          max-width: 160px;
-          margin: 0 0 0 20px;
-          clear: right;
-        "
-      >
+      <h3>Branching</h3>
+      <figure class="right-figure">
         <img src="img-exegesis/branch.png" />
         <figcaption>
-          2. invoking multiple actions on a panel
+          1. invoking multiple actions on a panel
+        </figcaption>
+      </figure>
+      <figure class="right-figure">
+        <img src="img-exegesis/stack.png" />
+        <figcaption>
+          2. "move any item" has multiple outputs
         </figcaption>
       </figure>
       <p>
-        There are two ways to produce branching computation on a
-        panel:
+        Droste's Lair provides two ways to produce branching
+        computation on a panel:
       </p>
       <ol>
+        <li>invoking multiple actions or procedures, or</li>
         <li>
-          Invoking an action or procedure that has multiple outputs,
-          or
+          invoking an action or procedure that has multiple outputs.
         </li>
-        <li>Invoking multiple actions or procedures.</li>
       </ol>
 
       <p>
-        When an action or procedure has multiple outputs, we group
-        those outputs into a stack of panels in the interface. It
-        would have alternatively been possible to not group those
-        outputs, and also display them as branching paths.
+        When multiple distinct actions are invoked on a panel, they
+        are shown branching from it (1). But when a single action or
+        procedure has multiple outputs, we group those outputs into a
+        stack of panels in the interface (2). It would have
+        alternatively been possible to not group those outputs and to
+        instead display them as branching paths.
       </p>
       <p>
-        The stack visualization keeps the interface closer to the
-        structure of the underlying program, compared to branching,
-        which would be closer to the run-time trace of the program.
+        There's a tradeoff between stacks and branches. The stack
+        visualization we chose keeps the interface closer to the
+        structure of an underlying flowchart: each action added by the
+        user is depicted in one place. If "move any item" and actions
+        like it instead produced branches in the interface, the
+        interface would show the run-time trace of the program with
+        higher fidelity, while more indirectly matching the underlying
+        program.
+      </p>
+      <p>
+        This tension between highlighting static and dynamic
+        structures is common when building live-programming systems.
+        The dynamic execution of a program is an "unfolding" (by loops
+        / calls) and "slicing" (by conditionals) of the program's
+        static specification. It is challenging to show both static
+        and dynamic layers at once.
+      </p>
+      <p>
+        But there are techniques that can help. Thoughtful visual
+        design can go a long way. And, lucky for us, computers are
+        interactive, so we can use interactive techniques too. In our
+        case, we could let users switch between stacked and branched
+        views as they please, or let them hover over a panel in a
+        stack to see up- & downstream paths highlighted.
       </p>
 
       <h3>Recursion</h3>
