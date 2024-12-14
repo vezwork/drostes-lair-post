@@ -171,3 +171,16 @@ figcaption {
   text-align: center;
   margin-top: 0.5rem;
 }
+
+.game-link {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  align-items: center;
+  font-style: italic;
+}
+
+.game-link img {
+  mix-blend-mode: lighten;
+  height: 4rem;
+}
