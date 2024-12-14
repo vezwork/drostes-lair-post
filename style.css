@@ -125,7 +125,8 @@ h3 {
 
 p,
 ul,
-figure {
+figure,
+.box {
   margin: 1.5rem 0;
 }
 
@@ -169,6 +170,14 @@ a:focus {
     28 / 28px / 0 round;
   border-width: 28px;
   border-style: solid;
+}
+
+.question {
+  font-family: Alkhemikal;
+  font-size: 5rem;
+  line-height: 1;
+  float: left;
+  margin-right: 1rem;
 }
 
 figcaption {
