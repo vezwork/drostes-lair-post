@@ -38,8 +38,9 @@ p:first-of-type:first-letter {
 }
 p:first-of-type:first-line {
   font-family: gothic-pixel-font;
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4rem;
 }
 p:first-letter {
   font-family: gothic-pixel-font;
@@ -120,7 +121,7 @@ h3 {
 }
 
 .rubricated {
-  color: #aa0000;
+  color: #945045;
 }
 
 p,
@@ -148,14 +149,14 @@ figure {
 }
 
 a {
-  color: #66c2ff;
+  color: rgb(143, 135, 200);
   text-decoration: none;
   font-weight: 500;
 }
 
 a:hover,
 a:focus {
-  color: #99d6ff;
+  color: rgb(143, 135, 200);
   text-decoration: underline;
 }
 
@@ -197,4 +198,12 @@ figcaption {
 .game-link video {
   mix-blend-mode: lighten;
   height: 4rem;
+}
+
+.divider {
+  background-image: url(./illuman.png);
+  background-size: 120px;
+  width: calc(100% + 75px);
+  height: 40px;
+  margin: 40px -37.5px;
 }
