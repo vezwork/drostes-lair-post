@@ -180,9 +180,26 @@ figcaption {
 .game-link {
   display: flex;
   gap: 1rem;
-  justify-content: end;
   align-items: center;
   font-style: italic;
+}
+
+.game-link-end {
+  justify-content: end;
+}
+
+.arrow {
+  font-size: 8rem;
+  line-height: 0;
+  position: relative;
+  top: -1.2rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.game-link:hover,
+.game-link:focus {
+  text-decoration: none;
 }
 
 .game-link video {
@@ -220,7 +237,6 @@ figcaption {
 .img-row img {
   min-width: 0;
   margin-left: 20px;
-  max-width: 35.3%;
 }
 
 .img-row img:first-child {
