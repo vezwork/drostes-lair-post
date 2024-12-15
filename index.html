@@ -347,7 +347,138 @@
         Join from the start
         <span class="arrow">⟿</span>
       </a>
-      ...
+      <p>
+        You've learned the rudiments of casting recursive spells and
+        splitting worlds into swarms of possibilities. Now it's time
+        to put these arcane arts to use on a real challenge.
+      </p>
+      <p>
+        An evil sorceror is tormenting a nearby village with an
+        insidious puzzle: How many ways, he asks, can a 2xN
+        checkerboard be covered completely with dominoes?
+      </p>
+      <p>
+        What!? N isn't a <i>number</i>! That's a letter! There's no
+        chance you'll be able to grapple with this sorcerer's
+        "pretending letters are numbers" hocus-pocus quite yet. But
+        you can start to get a feel by replacing N with a number.
+        Let's say, 4.
+      </p>
+      <p>You prepare a 2x4 checkerboard.</p>
+      <p class="img-row">
+        <img
+          src="img-walkthrough/3-1.jpg"
+          style="max-width: calc(600px * 0.625)"
+        />
+      </p>
+      <p>
+        How to fill it? Well, you can try just putting a domino down.
+      </p>
+      <p class="img-row">
+        <img
+          src="img-walkthrough/3-2.jpg"
+          style="max-width: calc(700px * 0.625)"
+        />
+      </p>
+      <p>
+        Ah, now maybe we could fill the rest of the board with
+        vertical dominoes like this. You realize you want to repeat a
+        step over and over again, sort of like the reversal exercise
+        you were trained on... but this is a little different. Before,
+        you casted a recursive spell onto an entire panel of
+        parchment. Here, that would cause the next dominoes to stack
+        on top of the first domino in the same squares over and over
+        again. We need to cast the spell so that it acts on the
+        <i>rest</i> of the checkerboard, leaving out the first domino.
+      </p>
+      <p>Maybe you can just... point your wand over a little?</p>
+      <p class="img-row">
+        <img
+          src="img-walkthrough/3-3.jpg"
+          style="max-width: calc(700px * 0.625)"
+        />
+      </p>
+      <p>
+        You cast the spell, and breathe a sigh of relief. It seems to
+        have worked!
+      </p>
+      <p class="img-row">
+        <img src="img-walkthrough/3-4.jpg" />
+      </p>
+      <p>
+        Deep in the recursion, your "place domino" action is failing,
+        since it's going off the board. That's ok though; that just
+        means the board has been filled. So you activate the escape
+        route.
+      </p>
+      <p class="img-row">
+        <img src="img-walkthrough/3-5.jpg" />
+      </p>
+      <p>
+        You've successfully found one way to fill the board with
+        dominoes, using only vertical dominoes. Now you should explore
+        using horizontal dominoes instead. Starting again from the
+        blank board at the far left, you create a second branch to
+        place two horizontal dominoes.
+      </p>
+      <p class="img-row">
+        <img src="img-walkthrough/3-6.jpg" />
+      </p>
+      <p>
+        Once again, you're left with board to fill after your first
+        two dominoes. You decide to once again cast a recursive spell,
+        asing your top-level procedure how it might choose to fill the
+        remainder of the board.
+      </p>
+      <p>
+        You expect to get another simple loop, showing how two more
+        horizontal dominoes could be added to fill the board. But
+        something extraordinary happens.
+      </p>
+      <p class="img-row">
+        <img src="img-walkthrough/3-7.jpg" />
+      </p>
+      <p>
+        The two-way branching you defined at the top level has been
+        replicated inside every level of your recursive spells! There
+        are no simple one-way loops anymore – instead, with every
+        deeper hole there are new branching possibilities.
+      </p>
+      <p>
+        You check the final output. Giving it a bit of thought, it
+        seems like these five coverings are the only ones possible.
+        Have you somehow stumbled onto a fully general program?
+      </p>
+      <p class="img-row">
+        <img src="img-walkthrough/3-8.jpg" />
+      </p>
+      <p>
+        It's difficult to make sense of it all at once. Fortunately,
+        your teacher taught you a "collapse calls beyond depth 1
+        spell" (hitting "2" on the keyboard), so you use it now. A
+        great many of the holes before you shrink, leaving only the
+        highest-level structure visible.
+      </p>
+      <p class="img-row">
+        <img src="img-walkthrough/3-x.jpg" />
+      </p>
+      <p>
+        Ah, of course. After adding a vertical domino, you can add
+        either a second vertical domino OR two horizontal dominoes.
+        Similarly, after adding horizontal dominoes, you can add
+        either a vertical domino OR two more horizontal dominoes. It
+        does seem like following this branching pattern, always adding
+        either a vertical or two horizontal dominoes, would get you
+        every possible covering.
+      </p>
+      <p>
+        You've conquered the problem of the 2x4 checkerboard! But
+        you're still mystified by the evil sorceror's ominous "N". To
+        make sense of his riddle, you may have to take a step back
+        from your furious spell-casting, and consider what deeper
+        patterns lurk within the movements of living parchments...
+      </p>
+
       <a
         href="https://joshuahhh.com/drostes-lair/#?example=dominoesDone"
         class="game-link game-link-end"
