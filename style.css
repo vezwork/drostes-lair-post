@@ -211,3 +211,18 @@ figcaption {
     border: none;
   }
 }
+
+.img-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-row img {
+  min-width: 0;
+  margin-left: 20px;
+  max-width: 35.3%;
+}
+
+.img-row img:first-child {
+  margin-left: 0;
+}
