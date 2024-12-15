@@ -75,16 +75,6 @@ h1 {
   color: #eee;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 80px;
-  }
-
-  body {
-    border: none;
-  }
-}
-
 .subtitle {
   font-family: Alkhemikal;
   font-weight: normal;
@@ -206,4 +196,18 @@ figcaption {
   width: calc(100% + 75px);
   height: 40px;
   margin: 40px -37.5px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  .subsubtitle {
+    font-size: 25px;
+  }
+
+  body {
+    border: none;
+  }
 }
