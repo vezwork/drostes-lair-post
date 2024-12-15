@@ -165,6 +165,10 @@ a:focus {
   border-style: solid;
 }
 
+.control-box {
+  background-color: rgba(42, 0, 0, 0.7);
+}
+
 .question {
   font-family: Alkhemikal;
   font-size: 5rem;
