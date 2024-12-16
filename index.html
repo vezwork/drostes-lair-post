@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta
@@ -476,12 +476,9 @@
         every possible covering.
       </p>
       <p>
-        You've conquered the problem of the 2x4 checkerboard! But
-        you're still mystified by the evil sorceror's ominous "N". To
-        make sense of his riddle, you may have to take a step back
-        from your furious spell-casting, and consider what deeper
-        patterns lurk within the movements of living parchments...
-        <!-- TODO: unclear signposting -->
+        You've conquered the problem of the 2x4 checkerboard! But some
+        mysteries remain... What did that evil sorceror mean by "N",
+        anyway? Finding out will be journey for another day.
       </p>
 
       <a
@@ -585,16 +582,14 @@
         by conventional CS standards, which is always a good sign.
       </p>
       <p>
-        <!-- TODO: better align language with language in walkthrough,
-         or explicit reference -->
         In order to extend the Subseqently model to work for
         Construct-'n'-Count-style counting problems, we had to add
         branching. Sure, Subsequently has conditional branches, as
         shown in the shot above, but we needed <i>unconditional</i>
         branches – branches that are all taken simultaneously,
-        splitting execution into parallel universes. This sounds
-        fancy, but it's straightforward to build. It is also
-        well-trodden ground in computer science, also known as
+        "dissolving the bounds of decision". This sounds fancy, but
+        it's straightforward to build. It is also well-trodden ground
+        in computer science, also known as
         <a
           href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-28.html"
         >
@@ -620,7 +615,8 @@
       />
       <p>
         The Subsequently-plus-branching potion we brewed up was enough
-        to cover some simple counting problems. But some of the most
+        to cover some simple counting problems, like the cards we made
+        in the Everbranching walkthrough. But some of the most
         interesting counting problems were still out of our grasp.
         These were the ones involving recursion: where counting
         possibilities for a larger structure involves splitting it
@@ -703,10 +699,10 @@
         closer to the structure of an underlying flowchart: each
         action added by the user is depicted in one place. If "move
         any item" and actions like it instead produced branches in the
-        interface, the interface would show the run-time trace of the
-        program with higher fidelity, while more indirectly matching
-        the underlying program.
-        <!-- todo: meh to "higher fidelity" -->
+        interface, these actions would be depicted multiple times,
+        making the interface less directly match the underlying
+        program. But in some ways, the run-time behavior of the
+        program would be more clear.
       </p>
       <p>
         This tension between highlighting static and dynamic
@@ -717,23 +713,21 @@
         and dynamic layers at once.
       </p>
       <p>
-        <!-- TODO: clarify we're talking future work -->
-        <!-- TODO: clarify up/downstream paths, or make more general/vague -->
         But there are techniques that can help. Thoughtful visual
         design can go a long way. And, lucky for us, computers are
-        interactive, so we can use interactive techniques too. In our
-        case, we could let users switch between stacked and branched
-        views as they please, or let them hover over a panel in a
-        stack to see up- & downstream paths highlighted.
+        interactive, so we can use interactive techniques too. Future
+        work on Droste's Lair could could let users switch between
+        stacked and branched views as they please. Or perhaps hovering
+        a panel could reveal, through highlights, other elements on
+        the screen less obviously connected to it.
       </p>
       <h3>Recursion</h3>
       <p>
         Unlike Droste's Lair, Subsequently doesn't have recursion. To
         loop in Subsequently, you make an arrow from a step back to a
-        previous step, essentially a "goto". Although this may condemn
-        Marcel to a life of Dijkstra-haunting, it is honestly a pretty
-        great way to loop, for a certain range of situations.
-        <!-- TODO: check on dijkstra -->
+        previous step, essentially a "goto". Although goto is out of
+        fashion these days, it is honestly a pretty great way to loop,
+        for a certain range of situations.
       </p>
       <p>
         Some of the problems we wanted our system to handle seemed to
@@ -1020,15 +1014,18 @@
       </p>
       <ul>
         <li>
-          <strong>More microworlds</strong>:
-          <!-- todo: sierpinski, etc -->
+          <strong>More microworlds</strong>: The demos in the
+          walkthroughs used two simple "microworlds" – lists and
+          domino tilings. We've been been able to get a bit of fun out
+          of these microworlds, but we wonder what other simple
+          domains of state and action could be even more generative.
         </li>
         <li>
           <strong>Mixing microworlds</strong>: Why can't I drag a card
           suit into the domino grid? Why can't I place a domino in a
-          list? It could be fun and generative to mash these worlds
-          together, but it's not at all clear what underlying models
-          would make that work.
+          list? Mashing worlds together could multiply the
+          possibilities, but it's not at all clear what underlying
+          models would make that work.
         </li>
         <li>
           <strong>Scaling</strong>: For this prototype, we've stuck to
@@ -1044,10 +1041,14 @@
           filter we showed in the Enumeration walkthrough.
         </li>
         <li>
-          <strong>On Ramp</strong>: opens up questions of the
-          possibility of going from concrete to abstract. Also what
-          about having a narrative walk through in the game? A level
-          progression? [TODO: Elliot refine]
+          <strong>Learnability</strong>: If you've taken the plunge to
+          actually spend some time in Droste's Lair, we applaud your
+          courage. You may have noticed – it's tough to work with, in
+          so many ways. What could we do to guide people in their
+          explorations? Could we borrow narrative techniques from
+          games? Could new mechanisms in our programming model give
+          people a gentle ramp from concrete actions into abstract
+          concepts like recursion?
         </li>
         <li>
           <strong>Representation of action</strong>: Following
