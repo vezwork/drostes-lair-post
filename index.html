@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta
@@ -80,6 +80,12 @@
         are available at the top and bottom of each journey so you can
         play along from the beginning or jump to the conclusion.
       </p>
+      <!-- TODO: Elliot try a disclaimer – make sure people don't
+      feel bad – we're going to do our best to try to guide you, but
+      Droste's Lair is an experiment working towards some pretty
+      tough ambitions, we certainly haven't made something super easy
+      to use, but we'd for you to join in and try it out, if you're
+      game -->
       <p class="box control-box">
         Pan by scrolling, or move the cursor with shift held.<br />
         Undo is available with ctrl-z.
@@ -477,6 +483,7 @@
         make sense of his riddle, you may have to take a step back
         from your furious spell-casting, and consider what deeper
         patterns lurk within the movements of living parchments...
+        <!-- TODO: unclear signposting -->
       </p>
 
       <a
@@ -532,7 +539,7 @@
         viewing and interacting with that model. Of course we draw on
         ideas from traditional programming languages, but always while
         asking "what does this <i>look</i> like?" and "how does it
-        feel to edit this?".
+        <i>feel</i> to edit this?".
       </p>
       <p>
         We were influenced by a few prior projects in this vein. Josh
@@ -558,9 +565,9 @@
         contents. There are no variables buried in some other pane;
         everything you need is right where you are. Subsequently also
         demonstrated that some processes (like picking elements out of
-        arrays) became simpler and more intuitive if presented as
-        <i>imperative processes</i> which mutate a world state, rather
-        than as <i>functional processes</i>.
+        arrays) feel more natural as <i>imperative processes</i> which
+        mutate a world state, rather than as
+        <i>functional processes</i>.
       </p>
       <figure style="max-width: 30rem">
         <img src="img-exegesis/subsequently.png" />
@@ -580,14 +587,16 @@
         by conventional CS standards, which is always a good sign.
       </p>
       <p>
+        <!-- TODO: better align language with language in walkthrough,
+         or explicit reference -->
         In order to extend the Subseqently model to work for
         Construct-'n'-Count-style counting problems, we had to add
         branching. Sure, Subsequently has conditional branches, as
-        shown in the shot above, but we needed
-        <i>unconditional</i> branches – branches that are all taken
-        simultaneously, splitting execution into parallel universes.
-        This sounds fancy, but it's straightforward to build. It is
-        also well-trodden ground in computer science, also known as
+        shown in the shot above, but we needed <i>unconditional</i>
+        branches – branches that are all taken simultaneously,
+        splitting execution into parallel universes. This sounds
+        fancy, but it's straightforward to build. It is also
+        well-trodden ground in computer science, also known as
         <a
           href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-28.html"
         >
@@ -624,7 +633,9 @@
         We were actually originally motivated by a more complicated
         question: counting paths on the fractal Sierpinski graph (also
         known as the Hanoi graph, since it maps out states in the
-        Towers of Hanoi puzzle).
+        Towers of Hanoi puzzle). We weren't able to get to this
+        problem in our short sprint, but dominoes were a nice
+        alternative.
       </p>
       <figure style="max-width: 30rem">
         <img src="img-exegesis/sierpinski.png" />
@@ -640,8 +651,8 @@
         strand for some time.)
       </p>
       <p>
-        With that, we had (& you now have) the basic formula for
-        Droste's Lair's programming model:
+        With that, we had the basic formula for the programming model
+        in Droste's Lair:
       </p>
       <ul>
         <li>Subsequently-style imperative flowcharts</li>
@@ -668,10 +679,13 @@
       </figure>
       <p>
         Droste's Lair provides two ways to produce branching
-        computation on a panel:
+        computation:
       </p>
       <ol>
-        <li>invoking multiple actions or procedures, or</li>
+        <li>
+          invoking multiple actions or procedures off of a single
+          panel, or
+        </li>
         <li>
           invoking an action or procedure that has multiple outputs.
         </li>
@@ -686,14 +700,15 @@
         instead display them as branching paths.
       </p>
       <p>
-        There's a tradeoff between stacks and branches. The stack
-        visualization we chose keeps the interface closer to the
-        structure of an underlying flowchart: each action added by the
-        user is depicted in one place. If "move any item" and actions
-        like it instead produced branches in the interface, the
-        interface would show the run-time trace of the program with
-        higher fidelity, while more indirectly matching the underlying
-        program.
+        There's a tradeoff involved in putting multiple outputs into a
+        stack. The stack visualization we chose keeps the interface
+        closer to the structure of an underlying flowchart: each
+        action added by the user is depicted in one place. If "move
+        any item" and actions like it instead produced branches in the
+        interface, the interface would show the run-time trace of the
+        program with higher fidelity, while more indirectly matching
+        the underlying program.
+        <!-- todo: meh to "higher fidelity" -->
       </p>
       <p>
         This tension between highlighting static and dynamic
@@ -704,6 +719,8 @@
         and dynamic layers at once.
       </p>
       <p>
+        <!-- TODO: clarify we're talking future work -->
+        <!-- TODO: clarify up/downstream paths, or make more general/vague -->
         But there are techniques that can help. Thoughtful visual
         design can go a long way. And, lucky for us, computers are
         interactive, so we can use interactive techniques too. In our
@@ -718,6 +735,7 @@
         previous step, essentially a "goto". Although this may condemn
         Marcel to a life of Dijkstra-haunting, it is honestly a pretty
         great way to loop, for a certain range of situations.
+        <!-- TODO: check on dijkstra -->
       </p>
       <p>
         Some of the problems we wanted our system to handle seemed to
@@ -783,12 +801,6 @@
         deeper and deeper into caves and/or recursive functions.
       </p>
       <p>
-        A quick aside: During a playtest, the player referred to a
-        procedure call sigil as a "label", seemingly referencing
-        labels for
-        <code>goto</code>s/jumps
-      </p>
-      <p>
         In Droste's Lair, you can call a procedure on an entire panel
         or on a piece of a panel's contents that you select.
       </p>
@@ -809,13 +821,13 @@
         for in our design. Passing into and out of procedure calls
         would require reorientation. To maintain the feeling of
         grounding we wanted, we instead chose to always show parts in
-        the context of the whole, with a color-coded outline to show
-        what part is actively focused by the procedure call and with
-        the rest of the whole faded out.
+        the context of the whole. We use a color-coded outline to show
+        what part is actively focused by the procedure call, and fade
+        out the rest.
       </p>
       <p>
-        (We maintain a conceptual color scheme throughout Droste's
-        Lair's interface:
+        (We maintain a conceptual color scheme throughout the
+        interface of Droste's Lair:
         <span style="color: #fce8a7; font-weight: bold">yellow</span>
         for actions,
         <span style="color: hsl(249deg 37% 55%); font-weight: bold"
@@ -869,9 +881,10 @@
         process and early implementation. The first design that worked
         for all our examples was allowing the user to attach an error
         handler panel to any other panel as a "catch" for that panel's
-        action. In the end we landed on a more general mechanism:
-        attaching an "escape" panel for when
-        <i>all</i> possible actions from a panel result in error.
+        action. In the end we landed on a different mechanism that
+        felt a bit more natural for our examples: attaching an
+        "escape" panel for when <i>all</i> possible actions from a
+        panel result in error.
       </p>
       <figure style="max-width: 30rem">
         <img src="img-exegesis/escape.jpg" />
@@ -961,7 +974,7 @@
       >
         Why do we make things?<br />
         Who do they appeal to?<br />
-        Why do we make things that look like microsoft office 1834?
+        Why do we make things that look like Microsoft Office?
       </p>
       <p
         style="
@@ -999,7 +1012,7 @@
         "
       >
         Encourage game-like patterns of thought<br />
-        and usage
+        and play
       </p>
 
       <h3>Even More Future Directions</h3>
@@ -1009,12 +1022,15 @@
       </p>
       <ul>
         <li>
+          <strong>More microworlds</strong>:
+          <!-- todo: sierpinski, etc -->
+        </li>
+        <li>
           <strong>Mixing microworlds</strong>: Why can't I drag a card
           suit into the domino grid? Why can't I place a domino in a
-          list? These questions, although seemingly simple, fling open
-          the pandora's box of fundamental questions of composition
-          and foundations of representations in our system. It's hard
-          to know where to start!
+          list? It could be fun and generative to mash these worlds
+          together, but it's not at all clear what underlying models
+          would make that work.
         </li>
         <li>
           <strong>Scaling</strong>: For this prototype, we've stuck to
@@ -1022,40 +1038,39 @@
           get very large. When they do, the way we visualize things
           begins to break down. This dovetails with a common critique
           of visual programming – a failure to scale to larger
-          situations. But we're not worrying much yet. Future work
-          taking on scaling will have so many techniques to draw from!
-          Expanding and collapsing, minimaps, outline views, more
-          compact graphic design, and on and on. We've already dipped
-          our toes into this space with the recursion-depth filter we
-          mentioned in [TODO: third walkthrough example].
+          situations. But we're not worrying much yet. When the time
+          comes to scale up, we will have so many techniques to draw
+          from! Expanding and collapsing, minimaps, outline views,
+          more compact graphic design, and on and on. We've already
+          dipped our toes into this space with the recursion-depth
+          filter we showed in the Enumeration walkthrough.
         </li>
         <li>
           <strong>On Ramp</strong>: opens up questions of the
           possibility of going from concrete to abstract. Also what
           about having a narrative walk through in the game? A level
-          progression? [TODO: refine]
+          progression? [TODO: Elliot refine]
         </li>
         <li>
           <strong>Representation of action</strong>: Following
-          Subsequently's example, we've added visual representation of
-          action itself to Droste's Lair. Rather than just seeing the
-          states of the world before and after an action, annotations
-          are added to the state to show what's happened. There are at
-          least four hypothetical views relevant to an action: a
-          "before" view, an "after" view, an annotated view of
-          "before" showing what is about to happen, and an annotated
-          view of "after" showing what just happened. In our current
-          system, we focus on the annotated view of "after". Is this
-          the best focus to have? Are there ways to include more
-          views, or to allow moving between views? Lots of interesting
-          questions here!
+          Subsequently's example, we've added visual representations
+          of actions themselves to Droste's Lair. Rather than just
+          seeing the states of the world before and after an action,
+          annotations are added to the state to show what's happened.
+          There are at least four hypothetical views relevant to an
+          action: a "before" view, an "after" view, an annotated view
+          of "before" showing what is about to happen, and an
+          annotated view of "after" showing what just happened. In our
+          current system, we focus on the annotated view of "after".
+          Is this the best focus to have? Are there ways to include
+          more views, or to allow moving between views?
         </li>
         <li>
           <strong>What do we do with it</strong>: We built Droste's
           Lair as a short experiment. We are, honestly, pretty
           delighted with it. But some may wonder: what good is this
-          thing anyway? We wonder that too, though we'd phrase it less
-          confrontationally. Could this project grow into an
+          thing anyway? We wonder that too, although we'd phrase it
+          less confrontationally. Could this project grow into an
           educational tool? A mathematical laboratory? An
           honest-to-goodness game? A programming environment for data
           integration workflows? Hmmmm.
@@ -1073,12 +1088,15 @@
           Confab, for motivating us with venues for sharing.
         </li>
         <li>
-          Ivan Reese, for play-testing &amp; insightful feedback
+          Ivan Reese, for play-testing &amp; insightful feedback.
         </li>
-        <li>Andrew Blinn, for championing juice</li>
         <li>
-          Rocky430 for inspiring conversation with Elliot about
-          Aesthetics such as Frutiger Aero and PSX
+          Andrew Blinn, for play-testing, insightful feedback, and his
+          championing of juice.
+        </li>
+        <li>
+          Rocky430, for inspiring conversation with Elliot about
+          Aesthetics such as Frutiger Aero and PSX.
         </li>
         <li>Nick Joliat, for fractal inspiration.</li>
         <li>Todd Matthews, for the brilliant name.</li>
